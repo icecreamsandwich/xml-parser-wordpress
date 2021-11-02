@@ -1,0 +1,43 @@
+﻿<?xml version="1.0"?>
+<List>
+	<Property>
+		<reference_number>MAK4455</reference_number>
+		<offering_type>CR</offering_type>
+		<property_type>AP</property_type>
+		<price_on_application>Yes</price_on_application>
+		<price>250000</price>
+		<service_charge>3000</service_charge>
+		<cheques>4</cheques>
+		<city>Doha</city>
+		<community>Corniche</community>
+		<sub_community>Corniche</sub_community>
+		<property_name>Premium</property_name>
+		<title_en>Premium Apartment Corniche</title_en>
+		<title_ar>شقة مميزة بالكورنيش</title_ar>
+		<description_en>Premium Apartment Corniche</description_en>
+		<description_ar>شقة مميزة بال</description_ar>
+		<features></features>
+		<size></size>
+		<bedroom></bedroom>
+		<bathroom></bathroom>
+		<agent>
+			<id>4534</id>
+			<name>Agent</name>
+			<email>agent@gmail.com</email>
+			<phone>+974434444</phone>
+			<license_no>423423444</license_no>
+			<photo>agent.jpg</photo>
+		</agent>
+		<developer></developer>
+		<parking></parking>
+		<furnished></furnished>
+		<view360></view360>
+		<photo>
+			<url last_updated=
+             "2014-08-08 15:16:17"
+             watermark="no">https://i.picsum.photos/id/338/536/354.jpg`             </url>
+		</photo>
+		<geopoints>25.12563365, 55.125477751</geopoints>
+	</Property>
+</List>
+
