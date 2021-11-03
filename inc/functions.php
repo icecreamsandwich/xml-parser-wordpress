@@ -11,17 +11,17 @@ function my_admin_setup_menu()
         'Parse the xml file', // The page title.
         'Parse xml file', // The submenu title displayed on dashboard.
         'manage_options', // Minimum capability to view the submenu
-        //'set-post-terms', //Unique name used as a slug for submenu item.
         'xml-parser-myrm/inc/parse_xml.php' //A callback function used to display page content.
     );
-    add_submenu_page(
+    /* add_submenu_page(
         'my_admin', //  Slug of the parent menu item.
         'Parse the xml file', // The page title.
         'Show parsed data', // The submenu title displayed on dashboard.
         'manage_options', // Minimum capability to view the submenu
         //'set-post-terms', //Unique name used as a slug for submenu item.
         'xml-parser-myrm/inc/show_data.php' //A callback function used to display page content.
-    );
+    ); */
+    add_menu_page( 'my_admin', 'Properties', 'read', 'http://localhost/wordpress-5.7/category/properties/', '', 'dashicons-text', 100 );
 }
 
 function my_plugin_init()

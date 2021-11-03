@@ -25,7 +25,8 @@ if ($xml === false) {
         "offering_type" => $offering_type,
         "property_type" => $property_type,
         "price_on_application" => $price_on_application,
-        "price" => $price
+        "price" => $price,
+        "image" => $image,
       ))) {
         echo "<br/>parsing finished.....<br/>";
         echo "data successfully imported to db";
@@ -46,43 +47,6 @@ if ($xml === false) {
           if (set_post_thumbnail($postId, $attach_id)) {
             echo "<br/>image attached to the post<br/>  ";
           }
-          /* require_once(ABSPATH . 'wp-admin/includes/image.php');
-          // Add Featured Image to Post
-          $image_name       = 'wp-header-logo.png';
-          $upload_dir       = wp_upload_dir(); // Set upload folder
-          $image_data       = file_get_contents($image); // Get image data
-          $unique_file_name = wp_unique_filename($upload_dir['path'], $image_name); // Generate unique name
-          $filename         = basename($unique_file_name); // Create image file name
-
-          // Check folder permission and define file location
-          if (wp_mkdir_p($upload_dir['path'])) {
-            $file = $upload_dir['path'] . '/' . $filename;
-          } else {
-            $file = $upload_dir['basedir'] . '/' . $filename;
-          }
-
-          // Create the image  file on the server
-          file_put_contents($file, $image_data);
-          //attach the post image
-          $wp_filetype = wp_check_filetype($image, null);
-
-          $attachment_data = array(
-            'post_mime_type' => $wp_filetype['type'],
-            'post_title' => $image,
-            'post_content' => '',
-            'post_status' => 'inherit'
-          );
-
-          $attach_id = wp_insert_attachment($attachment_data, $image, $postId);
-
-          //  Define attachment metadata
-          $attach_data = wp_generate_attachment_metadata($attach_id, $image);
-          wp_update_attachment_metadata($attach_id, $attachment_data);
-
-          // And finally assign featured image to post
-          if (set_post_thumbnail($postId, $attach_id)) {
-            echo "<br/>image attached to the post<br/>  ";
-          } */
           echo "<br/>post created successfully!<br/>";
         }
       }
@@ -105,11 +69,12 @@ function uploadImageFromUrl($imageURL, $post_id)
     var_dump($file['tmp_name']->get_error_messages());
   } else {
     $attachmentId = media_handle_sideload($file, $post_id);
-    
+
     if (is_wp_error($attachmentId)) {
       @unlink($file['tmp_name']);
       var_dump($attachmentId->get_error_messages());
     }
+    echo "<br/> Media uploaded<br/>";
     return $attachmentId;
   }
 }
