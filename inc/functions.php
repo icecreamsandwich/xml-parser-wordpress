@@ -21,16 +21,17 @@ function my_admin_setup_menu()
         //'set-post-terms', //Unique name used as a slug for submenu item.
         'xml-parser-myrm/inc/show_data.php' //A callback function used to display page content.
     ); */
-    add_menu_page( 'my_admin', 'Properties', 'read', 'http://localhost/wordpress-5.7/category/properties/', '', 'dashicons-text', 100 );
+    add_menu_page('my_admin', 'Properties', 'read', 'http://localhost/wordpress-5.7/category/properties/', '', 'dashicons-text', 100);
 }
 
 function my_plugin_init()
 {
 ?>
     <style>
-        .menu_items ul{
+        .menu_items ul {
             width: 300px;
         }
+
         .menu_items ul>li {
             display: block;
             height: 50px;
@@ -38,11 +39,13 @@ function my_plugin_init()
             border-radius: 5px;
             text-align: center;
         }
-        .menu_items ul>li a{
+
+        .menu_items ul>li a {
             font-size: 14px;
             text-decoration: none;
             display: block;
         }
+
         .plugin_btn {
             height: 50px;
             margin-top: 10px;
@@ -50,14 +53,18 @@ function my_plugin_init()
             border-radius: 5px;
             width: 300px;
         }
-        .plugin_btn:hover{
-            background-color: #b5afba; 
+
+        .plugin_btn:hover {
+            background-color: #b5afba;
         }
     </style>
 <?php
-$baseUrl = get_bloginfo('wpurl');
-    $page_link1 = '<a href="'.$baseUrl.'/wp-admin/admin.php?page=xml-parser-myrm/inc/parse_xml.php">Parse xml data</a>';
-    echo "<h2>XML Parser</h2> <br/><br/><br/>";
+    $baseUrl = get_bloginfo('wpurl');
+    $page_link1 = '<a href="' . $baseUrl . '/wp-admin/admin.php?page=xml-parser-myrm/inc/parse_xml.php">Parse XML data</a>';
+    echo "<h2>XML Parser</h2> <br/>
+    <h4>Up on clicking on the button the xml file uploaded in the 
+    folder will be parsed and saved to database</h4>
+    <br/><br/>";
     //display the link in the main page
     echo '
     <div class="menu_items">

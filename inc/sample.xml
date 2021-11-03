@@ -18,9 +18,9 @@
 		For additional information / to book a viewing, kindly contact us.</description_en>
 		<description_ar>شقة مميزة بال</description_ar>
 		<features></features>
-		<size></size>
-		<bedroom></bedroom>
-		<bathroom></bathroom>
+		<size>36 SQM</size>
+		<bedroom>3</bedroom>
+		<bathroom>3</bathroom>
 		<agent>
 			<id>4534</id>
 			<name>Agent</name>
@@ -29,9 +29,9 @@
 			<license_no>423423444</license_no>
 			<photo>agent.jpg</photo>
 		</agent>
-		<developer></developer>
-		<parking></parking>
-		<furnished></furnished>
+		<developer>DLF</developer>
+		<parking>2</parking>
+		<furnished>Yes</furnished>
 		<view360></view360>
 		<photo>
 			<url last_updated=
